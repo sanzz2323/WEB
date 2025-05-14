@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUGX </title>
+  <link rel="stylesheet" href="assets/css/style.css.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title"><span>LUGX</span></div>
+
+    <!-- Form Login -->
+    <form id="loginForm" action="index.html" method="POST">
+      <div class="row">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Nama" required />
+      </div>
+      <div class="row">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Kata Sandi" required />
+      
+      </div>
+      <div class="row button">
+        <input type="submit" value="Masuk" />
+      </div>
+      <div class="signup-link">Belum daftar? <a href="#" id="showSignUp">Daftar Sekarang</a></div>
+    </form>
+
+    <!-- Form Pendaftaran -->
+    <form id="signUpForm" action="#" method="POST" style="display: none;">
+      <div class="row">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Nama" required />
+      </div>
+      <div class="row">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Kata Sandi" required />
+      </div>
+      <div class="row">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Konfirmasi Sandi" required />
+      </div>
+      <div class="row button">
+        <input type="submit" value="Daftar" />
+      </div>
+      <div class="login-link">Sudah Daftar? <a href="#" id="showLogin">Masuk Sekarang</a></div>
+    </form>
+  </div>
+
+  <script>
+    // Toggle between Login and Sign Up forms
+    const showSignUp = document.getElementById('showSignUp');
+    const showLogin = document.getElementById('showLogin');
+    const loginForm = document.getElementById('loginForm');
+    const signUpForm = document.getElementById('signUpForm');
+
+    showSignUp.addEventListener('click', () => {
+      loginForm.style.display = 'none';
+      signUpForm.style.display = 'block';
+    });
+
+    showLogin.addEventListener('click', () => {
+      signUpForm.style.display = 'none';
+      loginForm.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
